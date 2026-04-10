@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: arial;
+            margin: 0px;
+            color: white;
+        }
+        .header{
+            background: black;
+            display: flex;
+            align-items: center;
+            padding:10px 20px;
+            color: white;
+        }
+        .cursor div{
+            cursor: pointer;
+        }
+        .logo{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        .logo small{
+            font-size: 16px;
+        }
+        .search{
+            flex: 1;
+            margin:0 20px;
+        }
+        .search input{
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+        }
+        .cart{
+            cursor: pointer;
+        }
+        .product{
+            display: grid;
+            grid-template-columns:3fr 3fr 3fr 3fr ;
+            gap: 0px;
+            margin-top: -360px;
+            padding: 0 2px;
+        }
+        .card{
+            
+            background-color: white;
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+            margin: 20px;
+            color: black;
+            padding-bottom: 10px;
+            display: flex;
+            flex-direction: column;
+        }
+        .head{
+            font-weight: bold;
+            padding: 10px;
+            font-size: 18px;
+            height: 60px;
+        }
+        .row{
+            display: grid;
+            grid-template-columns: 6fr 6fr;
+        }
+        .row div{
+            margin: 10px;
+            font-size: 13px;
+            font-weight: 600;
+            min-height: 140px;
+            cursor: pointer;
+        }
+        .para{
+            margin-top: auto;
+            margin-left: 10px;
+            font-size: 12px;
+            color: blueviolet;
+            cursor: pointer;
+        }
+        .para:hover{
+            color: blue;
+            cursor: pointer;
+        }
+        
+        
+
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="header">
+        <div class="cursor">
+    <div class="logo">amazon<small>.in</small></div>
+         </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search Amazon.in">
+    </div>
+        
+    <div class="cart" onclick="GoToCart()">🛒Cart</div>
+    </div>
+
+    <div class="image">
+        <img src="amazz.jpg" width="100%">
+    </div>
+
+    <section class="product">
+        <div class="card">
+            <div class="head">
+                Starting &#8377;49 | Deals On Home Essentials
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s1.png" width="150px">
+                    Cleaning Supplies
+                </div>
+                <div>
+                    <img src="s2.png" width="150px">
+                    Bathroom Accessories
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s3.png" width="150px">
+                    Home Tools 
+                </div>
+                <div>
+                    <img src="s4.png" width="150px">
+                    Wallpapers
+                </div>
+            
+            </div>
+    <p class="para" onclick="goToPage()">Explore all</p>
+
+        </div>
+        <div class="card">
+            <div class="head">
+                Automotive Essentials | Up to 60%off
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s5.png" width="150px">
+                    Cleaning Accessories
+                </div>
+                <div>
+                    <img src="s6.png" width="150px">
+                    Tyre & Rim care
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s7.png" width="150px">
+                    Helmets 
+                </div>
+                <div>
+                    <img src="s8.png" width="150px">
+                    Vaccum Cleaner
+                </div>
+            </div>
+    <p class="para" onclick="goToPage()">See more</p>
+
+        </div>
+        <div class="card">
+             <div class="head">
+                Bulk order discounts + Up to 18% GST SAvings
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s9.png" width="150px">
+                    Up to 45% Off | Laptops
+                </div>
+                <div>
+                    <img src="s10.png" width="150px">
+                    Up to 60% Off | Kitchen Appliances
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s11.png" width="150px">
+                    Min.50% Off | Office Furniture 
+                </div>
+                <div>
+                    <img src="s12.png" width="150px">
+                    Register using GST, Udyam, FSSAI or BPAN
+                </div>
+            </div>
+    <p class="para" onclick="goToPage()">Create a free account</p>
+
+        </div>
+        <div class="card">
+             <div class="head">
+                Starting &#8377;199 | Amazon brand & more
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s13.png" width="150px">
+                    Starting &#8377;199 | Bedsheets
+                </div>
+                <div>
+                    <img src="s14.png" width="150px">
+                    Starting &#8377;199 | Curtains
+                </div>
+            </div>
+            <div class="row">
+                <div>
+                    <img src="s15.png" width="150px">
+                    Min.40%Off | Ironing board and more 
+                </div>
+                <div>
+                    <img src="s16.png" width="150px">
+                    Up to 60%off | Home decor
+                </div>
+            </div>
+    <p class="para" onclick="goToPage()">See more</p>
+        </div>
+    </section>
+
+<script>
+
+function GoToCart(){
+    alert("Cart page coming soon");
+}
+
+
+document.querySelectorAll(".para").forEach(function(btn){
+    btn.addEventListener("click", function(){
+        alert("Opening products...");
+    });
+});
+
+
+document.querySelectorAll(".row div").forEach(function(card){
+    card.addEventListener("click", function(){
+        alert("Product clicked");
+    });
+});
+
+
+document.querySelector(".search input")
+.addEventListener("keypress", function(e){
+
+    if(e.key === "Enter"){
+        let value = this.value;
+        alert("Searching for: " + value);
+    }
+});
+
+</script>
+
+</body>
+</html>
